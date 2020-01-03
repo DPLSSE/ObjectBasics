@@ -16,28 +16,36 @@ namespace ObjectBasics
 
         public void ChangeDoor()
         {
-            if (!Open)
-            {
-                // open the door and wait until it is open
-                // ...
-                SendToggleSignal();
+            // Send a signal to the door
+            // ...
+            SendToggleSignal();
 
-                // Set the door open status
-                Open = CheckIfDoorOpen();
-            }
+            // Update the door open status
+            Open = CheckIfDoorOpen();
         }
 
         void SendToggleSignal()
         {
-            // send signal to the garage door system to change the door status
+            // Send signal to the garage door system to change the door state
             // ...
         }
 
         bool CheckIfDoorOpen()
         {
             bool doorOpen = false;
-            // send signal to the garage door system to determine if door is open
+            // check the status of the door
             // ...
+
+            // Simulate the door being in a different state than current
+            if (Open == true)
+            {
+                doorOpen = false;
+            }
+            else
+            {
+                doorOpen = true;
+            }
+
             return doorOpen;
         }
     }
