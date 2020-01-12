@@ -10,27 +10,27 @@ namespace ObjectBasics
 
             #region Other Details
             //CreatingObjects();
-            //CopyingTypes();
+            CopyingTypes();
             #endregion
 
             #region Passing Parameters
 
-            Console.WriteLine("*** Passing Parameters to Methods ***");
+            //Console.WriteLine("*** Passing Parameters to Methods ***");
 
-            int localCounter = 7;
-            GarageDoor localDoor = new GarageDoor("ABC123");
-            // print out the local variable
-            Console.WriteLine("localCounter = " + localCounter);
-            Console.WriteLine("localDoor Open = " + localDoor.Open);
-            Console.WriteLine();
+            //int localCounter = 7;
+            //GarageDoor localDoor = new GarageDoor("ABC123");
+            //// print out the local variable
+            //Console.WriteLine("localCounter = " + localCounter);
+            //Console.WriteLine("localDoor Open = " + localDoor.Open);
+            //Console.WriteLine();
 
-            // Pass the local variables to a method
-            PassingParameters(localCounter, localDoor);
+            //// Pass the local variables to a method
+            //PassingParameters(localCounter, localDoor);
 
-            // print out the local variable again
-            Console.WriteLine("localCounter = " + localCounter);
-            Console.WriteLine("localDoor Open = " + localDoor.Open);
-            Console.WriteLine();
+            //// print out the local variable again
+            //Console.WriteLine("localCounter = " + localCounter);
+            //Console.WriteLine("localDoor Open = " + localDoor.Open);
+            //Console.WriteLine();
 
             #endregion
 
@@ -62,15 +62,15 @@ namespace ObjectBasics
             GarageDoor door = new GarageDoor("ABC123");
 
             // Copy the variables
-            int counterCopy = counter;
-            GarageDoor doorCopy = door;
+            int counter2 = counter;
+            GarageDoor door2 = door;
 
             // Print out the original values
             Console.WriteLine("*** Original Values ***");
             Console.WriteLine("counter = " + counter); // 7
-            Console.WriteLine("counterCopy = " + counterCopy); // 7
+            Console.WriteLine("counter2 = " + counter2); // 7
             Console.WriteLine("door Open = " + door.Open); // False
-            Console.WriteLine("doorCopy Open = " + doorCopy.Open); // False
+            Console.WriteLine("door2 Open = " + door2.Open); // False
             Console.WriteLine();
 
             // modify the value/state of the original variables
@@ -78,9 +78,9 @@ namespace ObjectBasics
             door.ChangeDoor(); // Toggles the status of the Open property
             Console.WriteLine("*** Modified counter and door variables ****");
             Console.WriteLine("counter = " + counter); // 8
-            Console.WriteLine("counterCopy = " + counterCopy); // 7
+            Console.WriteLine("counter2 = " + counter2); // 7
             Console.WriteLine("door Open = " + door.Open); // True
-            Console.WriteLine("doorCopy Open = " + doorCopy.Open); // True
+            Console.WriteLine("door2 Open = " + door2.Open); // True
         }
 
         static void PassingParameters(int methodCounter, GarageDoor methodDoor)
